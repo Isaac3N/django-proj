@@ -86,7 +86,7 @@ def room(request, pk):
             room=room,
             body=request.POST.get("body")
         )
-        # adds a participant when they comment
+        # adds a participant when they comment on a messsge board
         room.participants.add(request.user)
         return redirect("room", pk=room.id)
 
